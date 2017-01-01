@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lg8-Kt-oAL" id="W4l-C6-cim">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="ayw-4f-TjO">
@@ -124,7 +124,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="6KX-GN-evX">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dQI-0d-9JV"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dQI-0d-9JV">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="dg0-Mt-X8r"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="MOI-In-LCN">
                             <connections>
                                 <segue destination="fht-um-xLu" kind="unwind" unwindAction="unwindToMealListWithSender:" id="hSV-ut-5Gj"/>
@@ -132,7 +136,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cancel" destination="dQI-0d-9JV" id="O8u-HA-0t6"/>
                         <outlet property="nameTextField" destination="NfG-vg-PUP" id="rNb-1T-AFJ"/>
                         <outlet property="photoImageView" destination="n4M-km-HjW" id="j7h-5Z-kQB"/>
                         <outlet property="ratingControl" destination="n3m-LB-PoO" id="vaa-pc-7HS"/>

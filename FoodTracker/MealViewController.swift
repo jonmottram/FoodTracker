@@ -19,7 +19,6 @@ class MealViewController: UIViewController,
     @IBOutlet weak var ratingControl: RatingControl!
 
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    @IBOutlet weak var cancel: UIBarButtonItem!
     
     /*
      This value is either passed by 'MealTableViewController' in
@@ -78,6 +77,9 @@ class MealViewController: UIViewController,
     }
     
     //MARK: Navigation
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     
     //  This method lets you configure a view controller before it's presented
     override func prepare( for segue: UIStoryboardSegue, sender: Any?) {
@@ -112,9 +114,6 @@ class MealViewController: UIViewController,
         present( imagePickerController, animated: true, completion: nil)
     }
     
-    @IBAction func cancel(_ sender: UIBarButtonItem) {
-        dismiss( animated: true, completion: nil )
-    }
     
     //MARK: Private Methods
     private func updateSaveButtonState( ) {
